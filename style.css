@@ -1,0 +1,370 @@
+* {
+    font-family: 'Permanent Marker', cursive;
+    color: hsla(0, 0%, 100%, 1);
+}
+:root{
+    --backblack: hsla(0, 0%, 0%, .25);
+    --backblackheavy: hsla(0, 0%, 0%, .40);
+}
+body{ 
+    padding-bottom: 3.25em;
+}
+/* this stuff is the background */
+.container{
+    height: 100%;
+    width: auto;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.container div{
+    position: absolute;
+    border-radius: 50%;
+    animation: gradient 4s infinite;
+}
+@keyframes gradient{
+    70%{
+       transform: scale(1.2) translate(50px);
+    }
+}
+.container div:nth-child(1){
+    height: 80%;
+    width: 80%;
+    background-color: #1A1B41;
+    left: -10%;
+    top: -30%;
+}
+.container div:nth-child(2){
+    height: 100%;
+    width: 100%;
+    background-color: #392636;
+    top: -30%;
+    right: -40%;
+    animation-delay: 2s;
+}
+.container div:nth-child(5){
+    height: 70%;
+    width: 80%;
+    background-color: #0353A4;
+    bottom: -15%;
+    right: -20%;
+    animation-delay: 0.3s;
+}
+.container div:nth-child(4){
+    height: 60%;
+    width: 62%;
+    background-color: #631D76;
+    bottom: -20%;
+    left: -12%;
+    animation-delay: 1.2s;
+}
+.container div:nth-child(3){
+    height: 80%;
+    width: 70%;
+    background-color: #21295C;
+    top: 10%;
+    left: -15%;
+    animation-delay: 1.5s;
+}
+.container:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(150px);
+}
+/* background for the store page */
+.container-big{
+    height: 150%;
+    width: auto;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: -50%;
+    overflow: hidden;
+    z-index: -1;
+}
+.container-big div{
+    position: absolute;
+    border-radius: 50%;
+    animation: gradient 4s infinite;
+}
+.container-big div:nth-child(1){
+    height: 80%;
+    width: 80%;
+    background-color: #1A1B41;
+    left: -10%;
+    top: -30%;
+}
+.container-big div:nth-child(2){
+    height: 100%;
+    width: 100%;
+    background-color: #392636;
+    top: -30%;
+    right: -40%;
+    animation-delay: 2s;
+}
+.container-big div:nth-child(3){
+    height: 80%;
+    width: 70%;
+    background-color: #21295C;
+    top: 10%;
+    left: -15%;
+    animation-delay: 1.5s;
+}
+.container-big div:nth-child(4){
+    height: 60%;
+    width: 62%;
+    background-color: #631D76;
+    bottom: -20%;
+    left: -12%;
+    animation-delay: 1.2s;
+}
+.container-big div:nth-child(5){
+    height: 70%;
+    width: 80%;
+    background-color: #0353A4;
+    bottom: -15%;
+    right: -20%;
+    animation-delay: 0.3s;
+}
+.container-big:after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(150px);
+}
+/* Hero Image */
+.logo {
+    text-shadow: 2px 2px 5px hsla(130, 100%, 50%, 1);
+    font-size: 2.25em;
+    text-align: center;
+    padding: 32px;
+}
+.logo a{
+    text-decoration: none;
+}
+
+/* Navigation Header */
+.nav-items {
+    list-style-type: none;
+    text-align: center;
+    padding-bottom: 32px;
+}
+.nav-items li {
+    display: inline-block;    
+    padding: 0px 90px;
+    font-size: 1.5em;
+}
+.nav-items li a {
+    text-decoration: none;
+}
+.nav-items li a:hover {
+    text-shadow: 2px 2px 5px hsla(130, 100%, 50%, 1);
+}
+.nav-items li a:active { /* the link you click will flash green for a moment before loading */
+    color:hsla(130, 100%, 50%, 1);
+}
+#active{ /* which page you are actually on will be lit in green */
+    color:hsla(130, 100%, 50%, 1);
+}
+
+/* footer */
+.footer{
+    margin-top: 16px;
+}
+.tmt{
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+    width: 99%;
+    margin: auto;
+    padding: 16px 0px;
+}
+.tmt a{
+    padding-left: 8px;
+}
+#twitter{
+    padding-left: 4px;
+}
+
+/* Home Page / index.html */
+.home-container { /* the container */
+    position: relative;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 46.875%;
+    height: auto;
+    margin-bottom: 7em;
+}
+.home-container img{ /* roguePG image */
+    width: 100%;
+    height: auto;
+}
+.top{
+    position: absolute;
+    top: 0%;
+    background-color: var(--backblackheavy);
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.25em;
+}
+.bottomleft { /* link to steam */
+    position: absolute;
+    bottom: .5em;
+    left: .5em;
+    background-color: var(--backblack);
+    font-size: 1.25em;
+    padding: 1% 4%;
+}
+.bottomleft a{
+    text-decoration: none;
+}
+.bottomleft:hover{text-shadow: 2px 2px 5px hsla(130, 100%, 50%, 1);}
+.bottomleft:active{color:hsla(130, 100%, 50%, 1);}
+.bottomright{ /* price */
+    position: absolute;
+    bottom: .5em;;
+    right: .5em;;
+    background-color: var(--backblack);
+    font-size: 1.25em;
+    padding: 1% 4%;
+}
+
+/* Store page */
+.left-grid-container{
+    display: inline-grid;
+    margin-left: 10%;
+    width: 48%;
+}
+.right-grid-container{
+    float: right;
+    margin-right: 10%;
+    width: 30%;
+}
+
+.rpg-item{/* featured container */
+    position: relative;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+.rpg-item img{/* roguepg image */
+    width: 100%;
+    height: auto;
+}
+.subheading{/* used for the subtitles Reviews and System Requirements on Store page */
+    background-color: var(--backblackheavy);
+    margin-top: .75em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.25em;
+    text-align: center;
+}
+.description{
+    background-color: var(--backblackheavy);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.25em;
+    text-align: center;
+}
+.left-item{
+    background-color: HSLA(0, 0%, 0%, .10)
+}
+.left-item h1{
+    font: 1.25em 'Outfit', sans-serif;
+    margin-left: .8em;
+}
+.left-item small{
+    font: .625em 'Outfit', sans-serif;
+    font-weight: 100;
+    float: right;
+    margin-top: -2.75em;
+    margin-right: 2.4em;
+}
+.left-item p{
+    font: .75em 'Outfit', sans-serif;
+    font-weight: 300;
+    margin: 0em 2em;
+}
+
+.right-item p{
+    font: 1em 'Outfit', sans-serif;
+    font-weight: 300;
+    margin: .75em 1em;
+}
+.greentxt{
+    font: 1em 'Outfit', sans-serif;
+    color: HSLA(130, 100%, 50%, 1);
+    margin-left: 1em;
+    margin-bottom: -.75em;
+}
+
+/* Blog page */
+.embed-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    height: 610px;
+    overflow-y: auto;
+    padding-bottom: 16px;
+    border-radius: 15px;
+}
+
+/* About Us page */
+.about-container img{
+    width: 20%;
+    float: left;
+    padding: 0em 5em 5em 28em;
+}
+.about-container h1{
+    font: 2em 'Outfit', sans-serif;
+}
+.about-container p{
+    font: 1.25em 'Outfit', sans-serif;
+    font-weight: 100;
+    padding-right: 20em;
+    padding-top: 4em;
+    padding-bottom: 13em;
+}
+
+/* Contact Us page */
+.info{
+    padding-top: 6em;
+    padding-bottom: 14em;
+}
+.info p{
+    padding: 1em;
+    font: 2em 'Outfit', sans-serif;
+    text-align: center;
+}
+/* 
+background-image: url(TMTStudios/roguepg.png);
+background-size: contain;
+background-repeat: no-repeat;
+font-family: 'Outfit', sans-serif; 
+font-family: 'Permanent Marker', cursive; 
+margin: 3.5%, 9%;
+.grid-item{
+    background-color: hsla(0, 0%, 0%, .25);;
+    border: 1px solid black;
+    padding: 1%;
+    font-size: 16px;
+    text-align: center;
+}
+*/
