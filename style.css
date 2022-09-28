@@ -9,6 +9,44 @@
 body{ 
     padding-bottom: 3.25em;
 }
+/* Hero Image */
+.logo {
+    text-shadow: 2px 2px 5px hsla(130, 100%, 50%, 1);
+    font-size: 2.25em;
+    text-align: center;
+    padding: 32px;
+}
+.logo a{
+    text-decoration: none;
+}
+/* mobile stuff to hide */
+.mobile-container{ 
+    display: none;
+}
+.nav{ /* mobile home page */
+    display: none;
+} /* end mobile home page */
+.subheader{ /* SUBHEADER */
+    display: none;
+}
+#ropg{ /* mobile store page */
+    display: none;
+}
+.highlight {
+    display: none;
+}
+.descrip {
+    display: none;
+}
+.products-footer{
+    display: none;
+} /* end mobile store page */
+.mobile-embed-container{
+    display: none;
+}
+.homebutton{
+    display: none;
+}
 /* this stuff is the background */
 .container{
     height: 100%;
@@ -142,16 +180,7 @@ body{
     width: 100%;
     backdrop-filter: blur(150px);
 }
-/* Hero Image */
-.logo {
-    text-shadow: 2px 2px 5px hsla(130, 100%, 50%, 1);
-    font-size: 2.25em;
-    text-align: center;
-    padding: 32px;
-}
-.logo a{
-    text-decoration: none;
-}
+
 
 /* Navigation Header */
 .nav-items {
@@ -200,7 +229,6 @@ body{
 .home-container { /* the container */
     position: relative;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 46.875%;
@@ -257,7 +285,6 @@ body{
 .rpg-item{/* featured container */
     position: relative;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -316,7 +343,6 @@ body{
 
 /* Blog page */
 .embed-container{
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 45%;
@@ -329,6 +355,8 @@ body{
 /* About Us page */
 .about-container img{
     width: 20%;
+    height: auto;
+    max-width: 50%;
     float: left;
     padding: 0em 5em 5em 28em;
 }
@@ -353,18 +381,325 @@ body{
     font: 2em 'Outfit', sans-serif;
     text-align: center;
 }
-/* 
-background-image: url(TMTStudios/roguepg.png);
-background-size: contain;
-background-repeat: no-repeat;
-font-family: 'Outfit', sans-serif; 
-font-family: 'Permanent Marker', cursive; 
-margin: 3.5%, 9%;
-.grid-item{
-    background-color: hsla(0, 0%, 0%, .25);;
-    border: 1px solid black;
-    padding: 1%;
-    font-size: 16px;
-    text-align: center;
-}
-*/
+
+/* stuff to show in mobile view */
+@media only screen and (max-width: 600px) {
+    /* things to hide in mobile */
+    .home-container{
+        display:none;
+    }
+    .nav-items{
+        display:none;
+    }
+    .container{
+      display: none;
+    }
+    .home-container{
+      display: none;
+    }
+    .footer-container{
+      display: none;
+    }
+    .container-big{
+      display: none;
+    }
+    .rpg-item{
+        display:none;
+    }
+    .left-grid-container{
+      display: none;
+    }
+    .right-grid-container{
+      display: none;
+    } 
+    #am-tayler{
+        display: none;
+    }
+    .left-item{
+        display: none;
+    }
+    .subheading{
+        display: none;
+    }
+    /* end things to hide */
+    .about-container img{
+      width: 70%;
+      height: auto;
+      max-width: 70%;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 24px;
+    }
+    .about-container p{
+      padding: 16px;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    /* background */
+    .mobile-container{
+      height: 100%;
+      width: auto;
+      position: absolute;
+      display: inline;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .mobile-container div{
+      position: absolute;
+      border-radius: 50%;
+      animation: gradient 4s infinite;
+    }
+    @keyframes gradient{
+      70%{
+        transform: scale(1.2) translate(50px);
+      }
+    }
+    .mobile-container div:nth-child(1){
+      height: 80%;
+      width: 80%;
+      background-color: #1A1B41;
+      left: -10%;
+      top: -30%;
+    }
+    .mobile-container div:nth-child(2){
+      height: 100%;
+      width: 100%;
+      background-color: #392636;
+      top: -10%;
+      right: -40%;
+      animation-delay: 2s;
+    }
+    .mobile-container div:nth-child(5){
+      height: 70%;
+      width: 70%;
+      background-color: #631D76;
+      bottom: -20%;
+      left: -12%;
+      animation-delay: 1.2s;
+    }
+    .mobile-container div:nth-child(4){
+      height: 70%;
+      width: 80%;
+      background-color: #0353A4;
+      bottom: -20%;
+      right: -20%;
+      animation-delay: 0.3s;
+    }
+    .mobile-container div:nth-child(3){
+      height: 80%;
+      width: 70%;
+      background-color: #21295C;
+      top: 20%;
+      left: -18%;
+      animation-delay: 1.5s;
+    }
+    .mobile-container::after{
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(150px);
+    }
+    /* end background */
+    /* mobile navigation */
+    .nav {
+        display: inline;
+    }
+    .nav ul{
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      list-style-type: none;
+      padding: 0;
+    }
+    .nav li{
+      padding: 2vh;
+    }
+    .nav li a {
+      font-size: 24px;
+      text-decoration: none;
+    }
+    /* end mobile navigation */
+    .subheader{
+      text-align: center;
+      font-size: 32px;
+      margin-top: -16px;
+      padding-bottom: 36px;
+      display: block;
+    }
+    /* products page */
+    .highlight{
+      background-color: hsla(0, 0%, 0%, .25);
+      height: 40px;
+      margin-left: -8px;
+      margin-right: -8px;
+      display: block;
+    }
+    .left{
+      float: left;
+      padding: 8px 16px;
+    }
+    .right{
+      float: right;
+      padding: 8px 16px;
+    }
+    #ropg{
+      width: 100%;
+      display: block;
+    }
+    .descrip{
+      font-family: 'Outfit', sans-serif;
+      padding: 8px 16px;
+      display: inline-block;
+    }
+    .products-footer{
+      display: block;
+      width: 114px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .button-top{
+      text-align: center;
+      background-color: HSLA(0, 0%, 0%, .10);
+      padding: 8px 16px;
+      border-radius: 12px;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+    .button-top a{
+      font-family: 'Outfit', sans-serif;
+      text-decoration: none;
+    }
+    .button-bottom{
+        text-align: center;
+        background-color: HSLA(0, 0%, 0%, .10);
+        padding: 8px 16px;
+        border-radius: 12px;
+        display: block;
+    }
+    .button-bottom a{
+        font-family: 'Outfit', sans-serif;
+        text-decoration: none;
+    }
+
+    .embed-container{
+        display: none;
+    }
+    .mobile-embed-container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 420px;
+        overflow-y: auto;
+        padding-bottom: 16px;
+        border-radius: 15px;
+    }
+
+    .about-container img{
+        width: 200px;
+        float: none;
+    }
+    .about-container p{
+        padding: 0px;
+        margin: 20px 40px;
+        font-size: 1em;
+    }
+
+    .homebutton{
+        background-color:HSLA(0, 0%, 0%, .10);
+        display: block;
+        width: 114px;
+        padding: 8px 16px;
+        margin-top: 40px;
+        margin-bottom: 12px;
+        border-radius: 12px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .homebutton a{
+        text-decoration: none;
+    }
+  
+    /* reviews page */
+    .rcontainer{ /* review container */
+      background-color: HSLA(0, 0%, 0%, .10);
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    .rcontainer-last{ /* review container */
+      background-color: HSLA(0, 0%, 0%, .10);
+      margin-left: -8px;
+      margin-right: -8px;
+      margin-bottom: 380px;
+    }
+    .rtitle{ /* review title */
+      float: left;
+      padding: 8px 24px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      width: 300px;
+    }
+    .small{ /* review author */
+      float: right;
+      font-family: 'Outfit', sans-serif;
+      font-size: 10px;
+      font-weight: 100;
+      padding: 16px 24px 12px;
+    }
+    .review{ /* the actual review */
+      clear: both;
+      padding: 8px 24px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 200;
+    }
+    .review-footer{
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      transform: translateX(25%);
+    }
+    .page-button{
+      float: left;
+      width: 40px;
+      text-align: center;
+      padding: 8px 0px;
+      background-color:HSLA(0, 0%, 0%, .10);
+      border-radius: 12px;
+      margin: 8px 4px;
+    }
+    #bactive{
+      background-color:HSLA(0, 0%, 0%, .25);
+    }
+    .page-button a{
+      font-family: 'Outfit', sans-serif;
+      text-decoration: none;
+    }
+    .products-button{ /* products button */
+      clear: left;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
+      transform: translateX(-10%);
+      background-color:HSLA(0, 0%, 0%, .10);
+      text-align: center;
+      border-radius: 12px;
+      padding: 8px 0px;
+    }
+    .products-button a{
+      text-decoration: none;
+    }
+  }
