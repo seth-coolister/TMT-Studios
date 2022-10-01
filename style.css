@@ -51,7 +51,7 @@ body{
 .container{
     height: 100%;
     width: auto;
-    position: absolute;
+    position: fixed;
     margin: auto;
     left: 0;
     right: 0;
@@ -116,71 +116,6 @@ body{
     width: 100%;
     backdrop-filter: blur(150px);
 }
-/* background for the store page */
-.container-big{
-    height: 150%;
-    width: auto;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0%;
-    bottom: -50%;
-    overflow: hidden;
-    z-index: -1;
-}
-.container-big div{
-    position: absolute;
-    border-radius: 50%;
-    animation: gradient 4s infinite;
-}
-.container-big div:nth-child(1){
-    height: 80%;
-    width: 80%;
-    background-color: #1A1B41;
-    left: -10%;
-    top: -30%;
-}
-.container-big div:nth-child(2){
-    height: 100%;
-    width: 100%;
-    background-color: #392636;
-    top: -30%;
-    right: -40%;
-    animation-delay: 2s;
-}
-.container-big div:nth-child(3){
-    height: 80%;
-    width: 70%;
-    background-color: #21295C;
-    top: 10%;
-    left: -15%;
-    animation-delay: 1.5s;
-}
-.container-big div:nth-child(4){
-    height: 60%;
-    width: 62%;
-    background-color: #631D76;
-    bottom: -20%;
-    left: -12%;
-    animation-delay: 1.2s;
-}
-.container-big div:nth-child(5){
-    height: 70%;
-    width: 80%;
-    background-color: #0353A4;
-    bottom: -15%;
-    right: -20%;
-    animation-delay: 0.3s;
-}
-.container-big:after{
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(150px);
-}
-
 
 /* Navigation Header */
 .nav-items {
@@ -190,7 +125,7 @@ body{
 }
 .nav-items li {
     display: inline-block;    
-    padding: 0px 90px;
+    padding: 0px 4vw;
     font-size: 1.5em;
 }
 .nav-items li a {
@@ -207,18 +142,13 @@ body{
 }
 
 /* footer */
-.footer{
-    margin-top: 16px;
-}
-.tmt{
+.tmt-foot{
     font-size: 2em;
     text-align: center;
-    position: absolute;
-    width: 99%;
-    margin: auto;
-    padding: 16px 0px;
+    position: relative;
+    padding-top: 16px;
 }
-.tmt a{
+.tmt-foot a{
     padding-left: 8px;
 }
 #twitter{
@@ -270,16 +200,18 @@ body{
     padding: 1% 4%;
 }
 
-/* Store page */
+/* Shop / Store page */
 .left-grid-container{
     display: inline-grid;
     margin-left: 10%;
     width: 48%;
+    padding-bottom: 20px;
 }
 .right-grid-container{
     float: right;
     margin-right: 10%;
     width: 30%;
+    padding-bottom: 100px;
 }
 
 .rpg-item{/* featured container */
@@ -328,6 +260,9 @@ body{
     font-weight: 300;
     margin: 0em 2em;
 }
+.left-item:nth-child(7){
+  padding-bottom: 20px;
+}
 
 .right-item p{
     font: 1em 'Outfit', sans-serif;
@@ -353,32 +288,30 @@ body{
 }
 
 /* About Us page */
-.about-container img{
-    width: 20%;
-    height: auto;
-    max-width: 50%;
-    float: left;
-    padding: 0em 5em 5em 28em;
+.about-container{
+  margin: 50px 20% 38vh 20%;
 }
-.about-container h1{
-    font: 2em 'Outfit', sans-serif;
+.rice-tayler img{
+  width: 300px;
+  float: left;
+  padding-right: 80px;
 }
-.about-container p{
-    font: 1.25em 'Outfit', sans-serif;
-    font-weight: 100;
-    padding-right: 20em;
-    padding-top: 4em;
-    padding-bottom: 13em;
+.am-tayler{
+  font: 32px 'Outfit', sans-serif;
+  margin-bottom: 58px;
+}
+.bio{
+  font: 16px 'Outfit', sans-serif;
+  font-weight: 300;
 }
 
 /* Contact Us page */
 .info{
-    padding-top: 6em;
-    padding-bottom: 14em;
+  margin: 10%;
 }
 .info p{
-    padding: 1em;
-    font: 2em 'Outfit', sans-serif;
+    padding: 16px;
+    font: 32px 'Outfit', sans-serif;
     text-align: center;
 }
 
@@ -397,7 +330,7 @@ body{
     .home-container{
       display: none;
     }
-    .footer-container{
+    .tmt-foot{
       display: none;
     }
     .container-big{
@@ -412,9 +345,6 @@ body{
     .right-grid-container{
       display: none;
     } 
-    #am-tayler{
-        display: none;
-    }
     .left-item{
         display: none;
     }
@@ -441,7 +371,7 @@ body{
     .mobile-container{
       height: 100%;
       width: auto;
-      position: absolute;
+      position: fixed;
       display: inline;
       margin: auto;
       left: 0;
@@ -594,6 +524,7 @@ body{
         text-decoration: none;
     }
 
+    /* social media page */
     .embed-container{
         display: none;
     }
@@ -602,28 +533,32 @@ body{
         margin-left: auto;
         margin-right: auto;
         width: 85%;
-        height: 420px;
+        height: 520px;
         overflow-y: auto;
-        padding-bottom: 16px;
-        border-radius: 15px;
+        border-radius: 12px;
     }
 
-    .about-container img{
-        width: 200px;
-        float: none;
+    /* about page */
+    .about-container{
+      margin: 0px 10%;
     }
-    .about-container p{
-        padding: 0px;
-        margin: 20px 40px;
-        font-size: 1em;
+    .rice-tayler img{
+      transform: translateX(12%);
+    }
+    .am-tayler{
+      clear: both;
+      font: 32px 'Outfit', sans-serif;
+      margin-bottom: 24px;
+      text-align: center;
     }
 
+    /* return buttons */
     .homebutton{
         background-color:HSLA(0, 0%, 0%, .10);
         display: block;
         width: 114px;
         padding: 8px 16px;
-        margin-top: 40px;
+        margin-top: 32px;
         margin-bottom: 12px;
         border-radius: 12px;
         text-align: center;
@@ -642,16 +577,17 @@ body{
     }
     .rcontainer-last{ /* review container */
       background-color: HSLA(0, 0%, 0%, .10);
+      padding-bottom: 12px;
       margin-left: -8px;
       margin-right: -8px;
-      margin-bottom: 380px;
+      margin-bottom: 30px;
     }
     .rtitle{ /* review title */
       float: left;
       padding: 8px 24px;
       font-family: 'Outfit', sans-serif;
       font-size: 20px;
-      width: 300px;
+      width: 50%;
     }
     .small{ /* review author */
       float: right;
@@ -665,28 +601,6 @@ body{
       padding: 8px 24px;
       font-family: 'Outfit', sans-serif;
       font-weight: 200;
-    }
-    .review-footer{
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-      transform: translateX(25%);
-    }
-    .page-button{
-      float: left;
-      width: 40px;
-      text-align: center;
-      padding: 8px 0px;
-      background-color:HSLA(0, 0%, 0%, .10);
-      border-radius: 12px;
-      margin: 8px 4px;
-    }
-    #bactive{
-      background-color:HSLA(0, 0%, 0%, .25);
-    }
-    .page-button a{
-      font-family: 'Outfit', sans-serif;
-      text-decoration: none;
     }
     .products-button{ /* products button */
       clear: left;
